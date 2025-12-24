@@ -1,0 +1,27 @@
+[project]
+name = "djangocustomlog"
+version = "0.1.0"
+description = "Custom Log Format for Tracking Code's Workflow between Microservices"
+requires-python = ">=3.13"
+dependencies = [
+    # --- Core Framework ---
+    "Django~=5.2",
+    "djangorestframework~=3.16",
+    "drf-spectacular~=0.26",
+    "gunicorn",
+    "psycopg[binary]",
+    # --- Celery & Async ---
+    "uvicorn[standard]~=0.29",
+    # --- Django Utilities ---
+    "django-environ~=0.11",
+    # --- Database ---
+    "psycopg[binary]",
+    "django-redis>=6.0.0",
+    "channels>=4.3.2",
+    "channels-redis>=4.3.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "django-debug-toolbar",
+]
